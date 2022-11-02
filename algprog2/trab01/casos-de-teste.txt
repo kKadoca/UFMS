@@ -1,3 +1,5 @@
+5
+
 Garibaldo Neves
 8
 16:30 17:30 Bater um papo com a Cleopatra
@@ -39,3 +41,25 @@ Larissa Xispirito
 16:20 16:40 Dar uma cambalhota
 20:00 21:00 Jantinha
 08:00 09:00 Acordar animada
+Capivara muito ocupada (agenda com muitos empates)
+20
+11:01 12:00 Tarefa FAB
+11:01 12:00 Tarefa FAA
+08:00 11:02 Tarefa E
+07:00 11:01 Tarefa C
+07:00 11:01 Tarefa B
+07:00 11:02 Tarefa D
+07:00 11:01 Tarefa A
+20:30 23:59 Preparar para dormir
+20:30 23:59 Cochilo antes de dormir
+00:00 07:00 Dormir no chao
+00:00 07:00 Dormir na cama (descricao com 50 caracteres!!!!!!)
+00:00 07:01 Dormir em qualquer lugar
+20:01 20:02 Tarefa ZDB
+20:02 20:03 Tarefa ZCAA
+20:00 20:01 Tarefa ZBBB
+20:01 20:02 Tarefa ZC
+20:00 20:02 Tarefa ZBAC
+19:00 19:01 Tarefa ZD
+19:00 19:01 Tarefa ZDCB
+19:02 19:04 Tarefa ZAA

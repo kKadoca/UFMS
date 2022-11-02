@@ -1,7 +1,8 @@
 /**************************************************
 *
-* Carlos Eduardo Cavalheira Soares Terra de Oliveira
-* Trabalho 1 - Algoritmos e Programacao II
+* Carlos Eduardo Cavalheira Soares Terra de Oliveira - 2020.1907.009-7
+* Trabalho 1
+* Professor: Diego Padilha Rubert
 *
 */
 #include <stdio.h>
@@ -35,15 +36,14 @@ int main(void) {
 
     scanf("%d", &k);
     capivara capivaras[k];
-    printf("\n-------------------------AGENDA-DESORGANIZADA---------------------------------\n\n");
 
     // lê uma capivara e suas infos
     for (i = 0; i < k; i++) {      
-        scanf(" %[^\n]%*c", &capivaras[i].nome);
+        scanf(" %[^\n]%*c", capivaras[i].nome);
         scanf("%d", &capivaras[i].nt);
         for (j = 0; j < capivaras[i].nt; j++) {
             scanf("%d:%d %d:%d\n", &capivaras[i].agenda[j].hi, &capivaras[i].agenda[j].mi, &capivaras[i].agenda[j].hf, &capivaras[i].agenda[j].mf);
-            fgets(capivaras[i].agenda[j].nome, MAX+1, stdin);
+            fgets(capivaras[i].agenda[j].nome, MAX+2, stdin);
         }
         printf("\n");
     }
@@ -56,11 +56,9 @@ int main(void) {
     // retira tarefas de conclusão impossível
     for (i = 0; i < k; i++) {
         capivaras[i].nt = corrigeAgenda(capivaras[i].nt, capivaras[i].agenda);
-        capivaras[i].nt = corrigeAgenda(capivaras[i].nt, capivaras[i].agenda);
     }
     
     // imprime as tarefas
-    printf("-----------------------------AGENDA-ORGANIZADA--------------------------------\n");
     for (i = 0; i < k; i++) {
         printf("\n%s\n", capivaras[i].nome);
         printf("%d\n", capivaras[i].nt);          
@@ -80,8 +78,8 @@ int corrigeAgenda(int n, tarefa v[MAX]) {
 
     w[x] = v[x];                                        // recebe o primeiro sempre
     for (j = 0; j < n-1; j++) {                         // constroi agenda nova
-        if (v[x].hf == v[z].hi) {
-            if (v[x].mf <= v[z].mi) {
+        if (w[x].hf == v[z].hi) {
+            if (w[x].mf <= v[z].mi) {
                 x++;
                 w[x] = v[z];
                 z++;
@@ -89,7 +87,7 @@ int corrigeAgenda(int n, tarefa v[MAX]) {
                 z++;
                 d++;
             }
-        } else if (v[j].hf <= v[j+1].hi) {
+        } else if (w[x].hf <= v[z].hi) {
             x++;
             w[x] = v[z];
             z++;
