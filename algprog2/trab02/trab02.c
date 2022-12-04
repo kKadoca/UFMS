@@ -304,5 +304,3 @@ double fatorial(int n) {
 
     return n;
 }
-
-
